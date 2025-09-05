@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Quiz Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Front Page -->
+  <div class="front_page activeInfo">
+    <h1>Quiz Game</h1>
+    <button class="btn" onclick="showDifficulty()">Start Game</button>
+    <button class="btn" onclick="openRules()">Game Rules</button>
+  </div>
+
+  <!-- Difficulty Selection -->
+  <div class="difficulty-container">
+    <h2>Choose Difficulty</h2>
+    <button class="btn" onclick="startGame('easy')">Easy</button>
+    <button class="btn" onclick="startGame('medium')">Medium</button>
+    <button class="btn" onclick="startGame('hard')">Hard</button>
+    <button class="btn back" onclick="goToMainMenu()">Back to Main Menu</button>
+  </div>
+
+  <!-- Game Rules Modal -->
+  <div class="rules_modal" id="rulesModal">
+    <div class="rules_content">
+      <span class="close" onclick="closeRules()">&times;</span>
+      <h2>Game Rules</h2>
+      <p>1. Choose a difficulty to start the quiz.<br>
+         2. Select the correct answer from multiple options.<br>
+         3. You have 30 seconds per question.<br>
+         4. Click "Next" for the next question.<br>
+         5. Your score is displayed at the end.<br>
+         6. You can restart or go to the main menu anytime.
+      </p>
+      <button class="btn" onclick="closeRules()">Close</button>
+    </div>
+  </div>
+
+  <!-- Quiz Page -->
+  <div class="quiz_box">
+    <div class="que_text">Question</div>
+    <div class="option_list"></div>
+    <div class="footer">
+      <div class="timer">Time Left: <span id="time">30</span>s</div>
+      <div class="game_buttons">
+        <button class="btn" onclick="nextQuestion()">Next</button>
+        <button class="btn" onclick="restartGame()">Restart</button>
+        <button class="btn" onclick="goToMainMenu()">Main Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result Page -->
+  <div class="result_box">
+    <div class="icon">🎉</div>
+    <div class="complete_text">You've completed the quiz!</div>
+    <div class="score_text">Your Score: <span id="score">0</span></div>
+    <button class="btn" onclick="restartGame()">Restart</button>
+    <button class="btn" onclick="goToMainMenu()">Main Menu</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

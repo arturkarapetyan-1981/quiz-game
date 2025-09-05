@@ -1,0 +1,182 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+button.btn {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: #fff;
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+button.btn.back {
+  background: #aaa;
+}
+
+.front_page,
+.difficulty-container,
+.quiz_box,
+.result_box {
+  display: none;
+  text-align: center;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 450px;
+}
+
+.front_page.activeInfo,
+.difficulty-container.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+  display: block;
+}
+
+.que_text {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.option_list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.option_list .option {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 600;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border:none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option_list .option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.option.correct {
+  background: #32cd32 !important;
+}
+
+.option.incorrect {
+  background: #ff4500 !important;
+}
+
+.option.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .timer {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footer .game_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.result_box .icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.result_box .complete_text {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.rules_modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.rules_modal.active {
+  display: flex;
+}
+
+.rules_modal .rules_content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.rules_modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .que_text {
+    font-size: 18px;
+  }
+  button.btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
