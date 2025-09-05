@@ -178,5 +178,13 @@ button.btn.back {
   }
 }
 
+#fullscreen-btn{
+   position: absolute;
+   right:0;
+   top:0;
+   margin: 10px 10px 0 0;
+   cursor:pointer;
+}
+
 
 

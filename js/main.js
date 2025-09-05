@@ -271,5 +271,17 @@ function goToMainMenu() {
   document.querySelector('.front_page').classList.add('activeInfo');
 }
 
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.error(`Error attempting fullscreen: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  // Attach event listener to button
+  document.getElementById("fullscreen-btn").addEventListener("click", toggleFullscreen);
 
   
